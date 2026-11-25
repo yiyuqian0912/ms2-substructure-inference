@@ -1,0 +1,16 @@
+{
+  "seed": 20261111,
+  "sources": ["experimental"],
+  "loss_mode": "set",
+  "model": {
+    "hidden": 256, "heads": 8, "spectrum_layers": 4, "graph_layers": 3,
+    "fourier_frequencies": 12, "dropout": 0.1, "temperature": 0.07
+  },
+  "training": {
+    "epochs": 80, "batch_size": 8, "eval_batch_size": 8, "accumulation": 1,
+    "workers": 0, "cpu_threads": 2, "learning_rate": 0.00003,
+    "weight_decay": 0.001, "warmup_fraction": 0.03, "gradient_clip": 1.0,
+    "amp": "none", "max_target_peaks": 32, "negatives": 64,
+    "catalog_batch": 256, "patience": 15, "log_every": 20
+  }
+}

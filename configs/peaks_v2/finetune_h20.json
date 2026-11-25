@@ -1,0 +1,22 @@
+{
+  "seed": 20261112,
+  "sources": ["experimental"],
+  "loss_mode": "set",
+  "model": {
+    "hidden": 256, "heads": 8, "spectrum_layers": 4, "graph_layers": 3,
+    "dropout": 0.1, "temperature": 0.07, "mass_frequencies": 24,
+    "mass_tolerance": 0.007, "relation_rank": 48
+  },
+  "joint": {
+    "candidate_k": 32, "strength": 2.0, "iterations": 2,
+    "neighbors": 6, "support_k": 16, "damping": 0.5
+  },
+  "training": {
+    "epochs": 80, "batch_size": 8, "eval_batch_size": 8, "accumulation": 1,
+    "workers": 0, "cpu_threads": 2, "learning_rate": 0.00003,
+    "weight_decay": 0.001, "warmup_fraction": 0.03, "gradient_clip": 1.0,
+    "amp": "none", "max_target_peaks": 32, "context_peaks": 8, "negatives": 64,
+    "relation_pairs": 16, "relation_weight": 0.1, "unary_weight": 0.2,
+    "catalog_batch": 256, "patience": 15, "log_every": 20
+  }
+}

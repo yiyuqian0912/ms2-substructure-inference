@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ms2-substructure-inference"
+version = "0.1.0"
+description = "Molecular substructure inference from local peaks in tandem mass spectra"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "rdkit>=2024.9", "torch>=2.4"]
+
+[project.scripts]
+casmi-neural = "casmi_neural.__main__:main"
+casmi-peaks = "casmi_peaks.__main__:main"
+casmi-joint = "casmi_joint.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
